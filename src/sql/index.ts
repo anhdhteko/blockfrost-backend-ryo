@@ -158,6 +158,8 @@ const QUERY_FILES = {
   scripts_script_hash_json: 'scripts/scripts_script_hash_json.sql',
   scripts_datum_datum_hash: 'scripts/scripts_datum_datum_hash.sql',
   scripts_datum_datum_hash_cbor: 'scripts/scripts_datum_datum_hash_cbor.sql',
+  txs_list: 'txs/txs_list.sql',
+  txs_list_count: 'txs/txs_list_count.sql',
   txs_404: 'txs/txs_404.sql',
   txs_hash: 'txs/txs_hash.sql',
   txs_hash_delegations: 'txs/txs_hash_delegations.sql',

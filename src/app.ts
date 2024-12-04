@@ -181,6 +181,7 @@ const start = (options = {}): FastifyInstance => {
   registerRoute(app, import('./routes/scripts/datum/datum-hash/cbor.js'));
 
   // txs
+  registerRoute(app, import('./routes/txs/lists.js'));
   registerRoute(app, import('./routes/txs/hash/index.js'));
   registerRoute(app, import('./routes/txs/hash/delegations.js'));
   registerRoute(app, import('./routes/txs/hash/mirs.js'));

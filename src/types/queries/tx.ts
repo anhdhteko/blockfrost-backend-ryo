@@ -7,6 +7,23 @@ export interface RequestParameters {
   };
 }
 
+export interface RequestTxsQueryParameters {
+  Querystring: {
+    page: number;
+    pageSize: number;
+  };
+}
+
+export interface TxSimple {
+  tx_hash: string;
+  epoch_num: number;
+  block_height: number;
+  block_time: number;
+  slot: number;
+  fees: string;
+  output_amount: string;
+}
+
 export interface Tx {
   hash: string;
   block: string;

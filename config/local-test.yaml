@@ -1,0 +1,29 @@
+server:
+  # Server listen address, you need to set this to 0.0.0.0 if running within docker
+  listenAddress: 'localhost'
+  # Server port
+  port: 3005
+  # Whether to enable verbose logging, when disabled only ERRORs are printed to a console
+  debug: true
+  # Whether to expose /prometheus endpoint
+  prometheusMetrics: false
+# Cardano DB Sync SQL connection
+dbSync:
+  host: '0.0.0.0'
+  database: 'cexplorer'
+  user: 'postgres'
+  # Optionally define a password
+  password: 'v8hlDV0yMAHHlIurYupj'
+  port: 6432
+  maxConnections: 50
+# Cardano network - mainnet, testnet, preview, preprod, custom
+network: 'preview'
+# path to the folder containing genesis data. If left blank, ./genesis/${network} will be used
+# genesisDataFolder: './genesis/mainnet'
+# Path to token registry directory (see next section for more details)
+tokenRegistryUrl: 'https://tokens.cardano.org'
+# # Experimental Mithril proxy
+# mithril:
+#   enabled: false # ENV var BLOCKFROST_MITHRIL_ENABLED=true
+#   aggregator: "https://aggregator.pre-release-preview.api.mithril.network/aggregator" # ENV var BLOCKFROST_MITHRIL_AGGREGATOR
+#   snapshotCDN: "https://example.com/" # ENV var BLOCKFROST_MITHRIL_SNAPSHOT_CDN
