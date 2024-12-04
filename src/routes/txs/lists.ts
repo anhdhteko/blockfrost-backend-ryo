@@ -5,20 +5,6 @@ import * as QueryTypes from '../../types/queries/tx.js';
 import * as ResponseTypes from '../../types/openapi-wrapper.js';
 import { getDbSync, gracefulRelease } from '../../utils/database.js';
 
-function convertSnakeToCamelCase(rows: ResponseTypes.TxSimple[]) {
-  return rows.map(row => {
-    return {
-      txHash: row.tx_hash,
-      epochNum: row.epoch_num,
-      blockHeight: row.block_height,
-      blockTime: row.block_time,
-      slot: row.slot,
-      fees: row.fees,
-      outputAmount: row.output_amount,
-    };
-  });
-}
-
 async function route(fastify: FastifyInstance) {
   fastify.route({
     url: '/txs',
@@ -50,7 +36,7 @@ async function route(fastify: FastifyInstance) {
               pageSize: request.query.pageSize,
               total: total,
             },
-            transactions: convertSnakeToCamelCase(rows),
+            transactions: rows,
           },
         });
       } catch (error) {

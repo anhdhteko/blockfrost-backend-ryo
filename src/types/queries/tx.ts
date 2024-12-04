@@ -15,13 +15,13 @@ export interface RequestTxsQueryParameters {
 }
 
 export interface TxSimple {
-  tx_hash: string;
-  epoch_num: number;
-  block_height: number;
-  block_time: number;
+  txHash: string;
+  epochNum: number;
+  blockHeight: number;
+  blockTime: number;
   slot: number;
   fees: string;
-  output_amount: string;
+  outputAmount: string;
 }
 
 export interface Tx {

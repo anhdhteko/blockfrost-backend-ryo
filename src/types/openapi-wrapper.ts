@@ -7,13 +7,13 @@ export type HealthClock =
   paths['/health/clock']['get']['responses']['200']['content']['application/json'];
 
 export interface TxSimple {
-  tx_hash: string;
-  epoch_num: number;
-  block_height: number;
-  block_time: number;
+  txHash: string;
+  epochNum: number;
+  blockHeight: number;
+  blockTime: number;
   slot: number;
   fees: string;
-  output_amount: string;
+  outputAmount: string;
 }
 
 export type OpenApiResponseTypes = components['schemas'] & {
